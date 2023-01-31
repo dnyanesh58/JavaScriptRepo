@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="comp.css">
+    <script>
+        function compoundInt() 
+        {
+            var p = parseInt(document.getElementById("pr").value);
+            var r = parseInt(document.getElementById("roi").value);
+            var n = parseInt(document.getElementById("tp").value);    
+            str = "<table border='2' widht='50%' height='50%'>"
+            var compoundInt = parseInt((p *(1 + (r/100))^n)) - p;
+            str = str + "<tr><td> Principal : </td>"+"<td>"+p+"</td></tr>"
+            str = str + "<tr><td> Rate Of Interest : </td>"+"<td>"+r+"</td></tr>"
+            str = str + "<tr><td> Period : </td>"+"<td>"+n+"</td></tr>"
+            str = str + "<tr><td> Compound Interest : </td>"+"<td>"+compoundInt+"</td></tr>"
+            str+="</table>"
+            document.getElementById("mydiv").innerHTML=str;
+            document.getElementById("pr").value="";
+            document.getElementById("roi").value="";
+            document.getElementById("tp").value="";
+            compoundInt="";
+        }
+    </script>
+</head>
+<body>
+    <table align="center">
+        <tr>
+            <th> <label for="pr"> Principle : </label> </th>
+            <td> <input type="number" name="pr" id="pr"></td>
+        </tr>
+
+        <tr>
+            <th> <label for="roi"> Rate Of Interest : </label> </th>
+            <td> <input type="number" name="roi" id="roi"></td>
+        </tr>
+        
+        <tr>
+            <th> <label for="tp"> Period : </label> </th>
+            <td> <input type="number" name="tp" id="tp"></td>
+        </tr>
+
+        <tr>
+             <td> <button type="button" onclick="compoundInt()"> Calculate </button> </td> 
+             <td><div id="mydiv" style="background-color :yellowgreen; " align="center"> </div> </td>
+        </tr>
+    </table>
+    
+</body>
+</html>
