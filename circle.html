@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calCircle() 
+        {
+            var radius = parseInt(document.getElementById("rad").value);
+            var areaCir = parseInt(Math.PI * radius * radius);
+            var circumCir = parseInt(2 * Math.PI * radius);
+
+            document.getElementById("mydiv").innerHTML="Area : "+areaCir+"<br>";
+            document.getElementById("mydiv").innerHTML+="<br>"+"Circumference : "+circumCir;
+            document.getElementById("rad").value="";
+        }
+    </script>
+</head>
+<body>
+    <table border="2px" style="border-collapse: collapse; border: blue solid;" align="center">
+        <tr> <td> Enter Radius : <input type="number" name="rad" id="rad"> </td> </tr>
+        <tr align="center"> <td> <button type="button" onclick="calCircle()"> Display </button> </td></tr>
+        <tr> <td> <div id="mydiv"></div> </td></tr>
+    </table>
+</body>
+</html>
