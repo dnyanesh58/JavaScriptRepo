@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var empArr = [];
+        function storeData() 
+        {
+            var empName = document.getElementById("enm").value;
+            empArr.push(empName);
+            document.getElementById("enm").value="";
+            empArr.sort();
+            display();
+        }     
+
+        function display() 
+        {
+            str="<table align='center' border='2px' style='margin-top : 20px'>"
+                for(ob of empArr)
+                {
+                    str = str + "<tr><td>"+ob+"</td></tr>";
+                }  
+            str = str + "</table>";
+            document.getElementById("mydiv").innerHTML=str;    
+        }
+    </script>
+</head>
+<body>
+    <table border="2px" align="center" style="text-align: center;">
+        <tr>
+             <td> Enter Employee Name : <input type="text" name="enm" id="enm" ></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="storeData()"> Add Employee </button></td>
+            <td></td>
+        </tr>
+    </table>
+    <div id="mydiv">
+
+    </div>
+</body>
+</html>
