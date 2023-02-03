@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <table bgcolor="lightblue" border="2px" align="centre" width="350px" height="500px" cellspacing="2px" cellpadding="2px"> 
+            <caption align="top"> Form </caption>
+
+            <tr>
+                <th> <label for="nm"> Name : </label></th>
+                <td> <input type="text" name="nm" id="nm" value="dnyanesh" readonly></td>
+            </tr>
+
+            <tr>
+                <th> <label for="dt"> Date : </label></th>
+                <td> <input type="date" name="dt" id="dt"></td>
+            </tr>
+
+            <tr>
+                <th> <label for="mob"> Mobile : </label></th>
+                <td> <input type="number" name="mob" id="mob" size="10"></td>
+            </tr>
+
+            <tr>
+                <th> <label for="add"> Address : </label></th>
+                <td> <textarea name="" id="" cols="30" rows="10"></textarea></td>
+            </tr>
+
+            <tr>
+                <th> <label for="gen"> Gender : </label></th>
+                <td> <input type="radio" name="gen" id="male" value="male"> 
+                     <label for="male"> Male </label> <br>
+                     <input type="radio" name="gen" id="female" value="female">
+                     <label for="female"> Female </label>
+                </td>
+            </tr>
+
+            <tr>
+                <th> <label for="deg"> Degree : </label></th>
+                <td> <input type="radio" name="deg" id="BE" value="BE"> 
+                     <label for="BE"> BE </label> 
+                     <input type="radio" name="deg" id="diploma" value="diploma">
+                     <label for="diploma"> Diploma </label>
+                     <input type="radio" name="deg" id="MSC" value="MSC">
+                     <label for="MSC"> MSC </label>
+                </td>
+            </tr>
+
+            <tr>
+                <th> <label for="hob"> Hobbies : </label> </th>
+                <td>
+                    <input type="checkbox" name="hob" id="Reading" value="Reading">
+                    <label for="Reading"> Reading </label>
+                    <input type="checkbox" name="hob" id="Trekking" value="Trekking">
+                    <label for="Trekking"> Trekking </label>
+                    <input type="checkbox" name="hob" id="Workout" value="Workout">
+                    <label for="Workout"> Workout </label>
+                    <input type="checkbox" name="hob" id="Cricket" value="Cricket">
+                    <label for="Cricket"> Cricket </label>
+                </td>
+            </tr>
+
+            <tr>
+                <th><label for="city"> City : </label> </th>
+                <td>
+                    <select name="city" id="city">
+                    <option value="1"> ---select any one---</option>
+                    <option value="pune"> Pune </option>
+                    <option value="mumbai"> Mumbai </option>
+                    <option value="banglore"> Banglore </option>
+                    <option value="delhi"> Delhi </option>
+                </select>
+                </td>
+            </tr>
+        </table>
+                <button type="button" name="btn" id="btn" value="submit"> Register User </button>
+                <button type="reset" name="btn" id="btn" value="reset"> Clear Form </button>
+    </body>
+</html>
